@@ -76,7 +76,7 @@ function Index() {
     setRatings((prev) => {
       const key = toKey(TODAY);
       const completed = tasks.filter((t) => t.date === key && t.done).length;
-      const entry: DayRating = { date: key, rating, note: note || undefined, completed };
+      const entry: DayRating = note ? { date: key, rating, note, completed } : { date: key, rating, completed };
       return prev.some((r) => r.date === key)
         ? prev.map((r) => (r.date === key ? entry : r))
         : [...prev, entry];
