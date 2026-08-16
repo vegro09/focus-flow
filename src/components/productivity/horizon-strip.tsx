@@ -21,7 +21,7 @@ export function HorizonStrip({
           Sprint horizon · 15d
         </span>
         <span className="num text-[11px] text-ink-mute">
-          {toKey(days[0])} → {toKey(days[14])}
+          {toKey(addDays(TODAY, -7))} → {toKey(addDays(TODAY, 7))}
         </span>
       </div>
       <div className="flex gap-1.5 overflow-x-auto pb-1">
